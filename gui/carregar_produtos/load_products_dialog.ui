@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoadProductsDialog</class>
+ <widget class="QDialog" name="LoadProductsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Carregar Produtos</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="layerLabel">
+     <property name="text">
+      <string>Selecione a camada:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="layerComboBox"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="attributeLabel">
+     <property name="text">
+      <string>Correspondência de atributos:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="nomeLabel">
+       <property name="text">
+        <string>Nome:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="nomeComboBox"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="miLabel">
+       <property name="text">
+        <string>MI:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="miComboBox"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="inomLabel">
+       <property name="text">
+        <string>INOM:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="inomComboBox"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="tipoEscalaLabel">
+       <property name="text">
+        <string>Tipo de Escala:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QComboBox" name="tipoEscalaComboBox"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="denominadorEscalaLabel">
+       <property name="text">
+        <string>Denominador de Escala:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QComboBox" name="denominadorEscalaComboBox"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="tipoProdutoLabel">
+       <property name="text">
+        <string>Tipo de Produto:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QComboBox" name="tipoProdutoComboBox"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="descricaoLabel">
+       <property name="text">
+        <string>Descrição:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QComboBox" name="descricaoComboBox"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="loadButton">
+     <property name="text">
+      <string>Carregar Produtos</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="createModelLayerButton">
+     <property name="text">
+      <string>Criar Camada Modelo</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

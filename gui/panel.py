@@ -4,8 +4,14 @@ from .usuarios.manage_users_dialog import ManageUsersDialog
 from .volumes.manage_volumes_dialog import ManageVolumesDialog
 from .volume_tipo_produto.manage_volume_tipo_produto_dialog import ManageVolumeTipoProdutoDialog
 from .verificar_inconsistencias.verificar_inconsistencias_dialog import VerificarInconsistenciasDialog
+from .carregar_produtos.load_products_dialog import LoadProductsDialog
 
 PANEL_MAPPING = {
+    "Carregar Produtos": {
+        "class": LoadProductsDialog,
+        "category": "Funções de Administrador",
+        "admin_only": True
+    },
     "Gerenciar Volumes": {
         "class": ManageVolumesDialog,
         "category": "Funções de Administrador",
