@@ -25,6 +25,7 @@ class DockablePanel(QDockWidget, FORM_CLASS):
     def setup_ui(self):
         self.versionLabel.setText(f"v{Config.VERSION}")
         self.populate_tree()
+        self.searchLineEdit.textChanged.connect(self.filter_tree)
 
     def populate_tree(self):
         self.treeWidget.clear()
@@ -55,4 +56,20 @@ class DockablePanel(QDockWidget, FORM_CLASS):
             self.iface.messageBar().pushMessage("Erro", f"Painel '{panel_name}' não implementado", level=Qgis.Warning)
 
     def update_content(self):
-            self.populate_tree()
+        self.populate_tree()
+
+    def filter_tree(self, text):
+        for i in range(self.treeWidget.topLevelItemCount()):
+            category_item = self.treeWidget.topLevelItem(i)
+            category_visible = False
+            for j in range(category_item.childCount()):
+                child_item = category_item.child(j)
+                if text.lower() in child_item.text(0).lower():
+                    child_item.setHidden(False)
+                    category_visible = True
+                else:
+                    child_item.setHidden(True)
+            category_item.setHidden(not category_visible)
+
+        if not text:
+            self.treeWidget.expandAll()
