@@ -3,6 +3,7 @@ from .lotes.manage_lotes_dialog import ManageLotesDialog
 from .usuarios.manage_users_dialog import ManageUsersDialog
 from .volumes.manage_volumes_dialog import ManageVolumesDialog
 from .volume_tipo_produto.manage_volume_tipo_produto_dialog import ManageVolumeTipoProdutoDialog
+from .verificar_inconsistencias.verificar_inconsistencias_dialog import VerificarInconsistenciasDialog
 
 PANEL_MAPPING = {
     "Gerenciar Volumes": {
@@ -27,6 +28,11 @@ PANEL_MAPPING = {
     },
     "Gerenciar Usuários": {
         "class": ManageUsersDialog,
+        "category": "Funções de Administrador",
+        "admin_only": True
+    },
+    "Verificar Inconsistências": {
+        "class": VerificarInconsistenciasDialog,
         "category": "Funções de Administrador",
         "admin_only": True
     }
