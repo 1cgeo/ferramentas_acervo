@@ -39,7 +39,7 @@ class EditProjectDialog(QDialog, FORM_CLASS):
         self.endDateCheckBox.stateChanged.connect(self.toggle_end_date)
 
     def load_status_types(self):
-        response = self.api_client.get('acervo/dominio/tipo_status_execucao')
+        response = self.api_client.get('gerencia/dominio/tipo_status_execucao')
         if response and 'dados' in response:
             self.status_types = {item['nome']: item['code'] for item in response['dados']}
             self.statusComboBox.clear()

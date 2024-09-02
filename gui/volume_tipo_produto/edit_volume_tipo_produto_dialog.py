@@ -28,7 +28,7 @@ class EditVolumeTipoProdutoDialog(QDialog, FORM_CLASS):
         self.buttonBox.rejected.connect(self.reject)
 
     def load_tipos_produto(self):
-        response = self.api_client.get('acervo/dominio/tipo_produto')
+        response = self.api_client.get('gerencia/dominio/tipo_produto')
         if response and 'dados' in response:
             tipos_produto = response['dados']
             self.tipoProdutoComboBox.clear()
