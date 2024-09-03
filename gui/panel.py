@@ -7,10 +7,16 @@ from .verificar_inconsistencias.verificar_inconsistencias_dialog import Verifica
 from .carregar_produtos.load_products_dialog import LoadProductsDialog
 from .carregar_arquivos_sistematico.load_systematic_files_dialog import LoadSystematicFilesDialog
 from .carregar_camadas_produto.load_product_layers_dialog import LoadProductLayersDialog
+from .informacao_produto.product_info_dialog import ProductInfoDialog
 
 PANEL_MAPPING = {
     "Carregar Camadas de Produtos": {
         "class": LoadProductLayersDialog,
+        "category": "Funções Gerais",
+        "admin_only": False
+    },
+    "Informações do Produto": {
+        "class": ProductInfoDialog,
         "category": "Funções Gerais",
         "admin_only": False
     },
