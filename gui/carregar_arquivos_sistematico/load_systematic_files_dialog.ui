@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoadSystematicFilesDialog</class>
+ <widget class="QDialog" name="LoadSystematicFilesDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Carregar Arquivos a Produtos Sistemáticos</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="layerLabel">
+     <property name="text">
+      <string>Selecione a camada:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="layerComboBox"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="pathLabel">
+     <property name="text">
+      <string>Nota: A camada deve conter um campo 'path' com o caminho completo para cada arquivo.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="requiredFieldsLabel">
+     <property name="text">
+      <string>Campos obrigatórios: produto_inom, uuid_versao, versao, nome_versao, tipo_versao_id, data_criacao, data_edicao, path, situacao_bdgex_id, orgao_produtor, tipo_arquivo_id, nome</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="loadButton">
+     <property name="text">
+      <string>Carregar Arquivos</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="createModelLayerButton">
+     <property name="text">
+      <string>Criar Camada Modelo</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -5,10 +5,16 @@ from .volumes.manage_volumes_dialog import ManageVolumesDialog
 from .volume_tipo_produto.manage_volume_tipo_produto_dialog import ManageVolumeTipoProdutoDialog
 from .verificar_inconsistencias.verificar_inconsistencias_dialog import VerificarInconsistenciasDialog
 from .carregar_produtos.load_products_dialog import LoadProductsDialog
+from .carregar_arquivos_sistematico.load_systematic_files_dialog import LoadSystematicFilesDialog
 
 PANEL_MAPPING = {
     "Carregar Produtos": {
         "class": LoadProductsDialog,
+        "category": "Funções de Administrador",
+        "admin_only": True
+    },
+    "Carregar Arquivos Sistemáticos": {
+        "class": LoadSystematicFilesDialog,
         "category": "Funções de Administrador",
         "admin_only": True
     },
